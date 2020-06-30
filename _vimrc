@@ -1,8 +1,23 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" Based on https://github.com/amix/vimrc
+" - Based on https://github.com/amix/vimrc
+" - It uses the vim-plug plugin manager: https://github.com/junegunn/vim-plug
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if empty(glob('~/.vim/autoload/plug.vim'))
+ silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+ \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
+
+" Initialize plugin system
+call plug#end()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
