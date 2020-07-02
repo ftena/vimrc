@@ -15,6 +15,11 @@ endif
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/bufexplorer.zip'
+
+" On-demand loading
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " Initialize plugin system
 call plug#end()
 
