@@ -1,29 +1,33 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " - Based on https://github.com/amix/vimrc
-" - It uses the vim-plug plugin manager: https://github.com/junegunn/vim-plug
-"
+" - It uses the plugin manager https://github.com/VundleVim/Vundle.Vim
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-if empty(glob('~/.vim/autoload/plug.vim'))
- silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
- \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
- autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
-call plug#begin('~/.vim/plugged')
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
 
-Plug 'vim-scripts/bufexplorer.zip'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" On-demand loading
-Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'preservim/nerdtree'
 
-" Initialize plugin system
-call plug#end()
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
