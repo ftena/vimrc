@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'preservim/nerdtree'
+Plugin 'joshdick/onedark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -145,11 +146,9 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme onedark
 catch
 endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
