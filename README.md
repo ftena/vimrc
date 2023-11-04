@@ -1,9 +1,17 @@
 # vimrc
 My vim configuration (vimrc)
 
-- Install on Linux: just copy _vimrc into your ~/.vimrc
-- Install on Windows: copy _vimrc into your vim $HOME directory. [More info.](http://vim.wikia.com/wiki/Open_vimrc_file)
+## Set up:
 
-Requirements:
+```
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp _vimrc ~/.vimrc`
+```
 
-- curl
+## Install plugins
+
+Just launch `vim` and run `:PluginInstall`
+
+## Requirements
+
+    curl
