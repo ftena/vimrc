@@ -1,7 +1,7 @@
 # vimrc
-My vim configuration (vimrc)
+My vim configuration.
 
-## Set up:
+## Set up
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
